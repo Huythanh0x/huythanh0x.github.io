@@ -21,4 +21,5 @@ This will be a story about what I did in the way from nearly zero expreience in 
 - Go through Java [cheat sheet](https://programmingwithmosh.com/wp-content/uploads/2019/07/Java-Cheat-Sheet.pdf) 
 - Completed 20 challenges from [30 days of code-hackerrank](https://www.hackerrank.com/domains/tutorials/30-days-of-code)
 - Create [my first CRUD app](https://github.com/Huythanh0x/JourneyWithJava/tree/main/FirstCRUDSpringApp) following this [short tutorial](https://www.youtube.com/watch?v=IucFDX3RO9U) 
+- Complete the course  [Building a REST API with Spring Boot](https://spring.academy/courses/building-a-rest-api-with-spring-boot)
 - Go through the book [Spring start here](https://www.amazon.com/Spring-Start-Here-Learn-learn/dp/1617298697#customerReviews)

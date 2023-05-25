@@ -4,11 +4,9 @@ categories: [Android]
 tags: [jetpack, kotlin]
 ---
 
-<h2>View Binding in Android</h2>
-
 <p>When writing regular code to access a UI component from the code behind, we usually need to declare and then use <code>findViewById()</code>. However, with View Binding, we can completely eliminate the <code>findViewById</code> step and enjoy several advantages. In this article, I will introduce View Binding and provide some examples of its usage.</p>
 
-<h3>Brief introduction to View Binding</h3>
+##  Brief introduction to View Binding
 
 <p>View Binding is a component in Android Jetpack that helps eliminate the <code>findViewById</code> step in the coding process by generating corresponding classes for XML files in the project. Here are some benefits it brings:</p>
 
@@ -21,7 +19,7 @@ tags: [jetpack, kotlin]
 
 <p>View Binding can be considered a lightweight version of Data Binding with the main function of eliminating <code>findViewById</code>. If you want to automatically bind data and UI from XML to code-behind for automatic updates and also eliminate <code>findViewById</code>, Data Binding is more suitable.</p>
 
-<h3>Enable View Binding</h3>
+##  Enable View Binding
 
 <p>To enable View Binding in an Android project, follow these steps:</p>
 
@@ -35,7 +33,7 @@ buildFeatures {
     viewBinding true
 }
 ```
-<h3>View Binding in Activity</h3>
+##  View Binding in Activity
 
 <p>To use View Binding in an Activity, follow these steps:</p>
 
@@ -77,7 +75,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
-<h3>View Binding and Fragment - Inflate</h3>
+##  View Binding and Fragment - Inflate
 
 <p>For Fragments, we have two approaches: inflate and bind. Let's start with inflate.</p>
 
@@ -123,7 +121,7 @@ class InflateFragment : Fragment(R.layout.fragment_inflate) {
 
 <p>After inflating the layout, we can use the <code>binding</code> variable to query the components as we did in the Activity example. It's important to always override <code>onDestroy</code> and set <code>_binding</code> to null when the Fragment is destroyed.</p>
 
-<h3>View Binding and Fragment - Bind</h3>
+##  View Binding and Fragment - Bind
 
 <p>Similar to the previous approach, but this time we bind the view in the <code>onViewCreated</code> method after the view has been created. Here's an example:</p>
 
@@ -145,7 +143,7 @@ class BindFragment : Fragment(R.layout.fragment_bind) {
 
 <p>Since the steps are similar, I won't explain them again. Just note the difference in the timing of inflating or binding the view, depending on whether the view has been created or not.</p>
 
-<h3>Conclusion</h3>
+##  Conclusion
 
 <p>About a month ago, I read a book on Android programming for beginners, and I noticed that the View Binding chapter was one of the first chapters. Throughout the book,
 
@@ -153,7 +151,7 @@ class BindFragment : Fragment(R.layout.fragment_bind) {
 
 <p>In this article, I highlighted some advantages of View Binding and demonstrated its usage in Activities and Fragments.</p>
 
-<h3>References</h3>
+##  References
 
 <ul>
 <li>Skillshare course - <a href="https://www.skillshare.com/classes/How-to-use-Android-View-Binding-like-a-pro/1393186474/projects?via=watch-history">How to use Android View Binding like a pro</a></li>
