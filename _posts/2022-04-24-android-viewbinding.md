@@ -30,7 +30,7 @@ tags: [jetpack, kotlin]
 <li>Inside the <code>android</code> block, add the following code:</li>
 </ol>
 
-```Kotlin
+```kotlin
 buildFeatures {
     viewBinding true
 }
@@ -43,7 +43,7 @@ buildFeatures {
 <li>Create a variable of the corresponding View Binding class</li>
 </ol>
 
-```Kotlin
+```kotlin
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,9 +65,9 @@ class MainActivity : AppCompatActivity() {
 
 <p>We can query the remaining components directly based on their IDs. For example, if we have an ID called <code>text_hello_world</code>, we can query it using <code>
 
-binding.textHelloWorld</code>. Since Kotlin automatically generates the getter/setter functions, we can access it as shown below:</p>
+binding.textHelloWorld</code>. Since kotlin automatically generates the getter/setter functions, we can access it as shown below:</p>
 
-```Kotlin
+```kotlin
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
 <li>Create a Fragment and override the <code>onCreateView</code> method.</li>
 </ol>
 
-```Kotlin
+```kotlin
 class InflateFragment : Fragment(R.layout.fragment_inflate) {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -102,7 +102,7 @@ class InflateFragment : Fragment(R.layout.fragment_inflate) {
 
 <p>According to convention, we create two variables: <code>_binding</code> (nullable) and <code>binding</code>. The <code>_binding</code> variable is used for inflating or binding the layout, while the <code>binding</code> variable retrieves the inflated/bound result from <code>_binding</code> for querying. If <code>_binding</code> is null, a <code>NullPointerException</code> is thrown.</p>
 
-```Kotlin
+```kotlin
 class InflateFragment : Fragment(R.layout.fragment_inflate) {
     private var _binding: FragmentInflateBinding? = null
     private val binding get() = _binding!!
@@ -127,7 +127,7 @@ class InflateFragment : Fragment(R.layout.fragment_inflate) {
 
 <p>Similar to the previous approach, but this time we bind the view in the <code>onViewCreated</code> method after the view has been created. Here's an example:</p>
 
-```Kotlin
+```kotlin
 class BindFragment : Fragment(R.layout.fragment_bind) {
     private var _binding: FragmentBindBinding? = null
     private val binding get() = _binding!!
