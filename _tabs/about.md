@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 
 <h1 align="center">Hi 👋, I&#39;m Thanh</h1>
@@ -17,7 +17,7 @@ order: 4
 </li>
 <li><p>📝 I regularly write articles on <a href="#">this blog</a></p>
 </li>
-<li><p>📄 I have a lot experience in creating android app, exten∆sion and automating stuffs</p>
+<li><p>📄 I have a lot experience in creating android app, extension and automating stuffs</p>
 </li>
 </ul>
 <h3 align="left">Languages and Tools:</h3>
@@ -35,6 +35,6 @@ order: 4
 <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/>
 </div>
 
-<p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=huythanh0x&show_icons=true&locale=en&layout=compact&hide=html,css&langs_count=4" alt="huythanh0x" /></p>
+<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=huythanh0x&show_icons=true&locale=en&layout=compact&hide=html,css&langs_count=4" alt="huythanh0x" />
 
-<p  align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=huythanh0x&" alt="huythanh0x" /></p>
+<img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=huythanh0x&" alt="huythanh0x" />

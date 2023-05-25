@@ -30,10 +30,11 @@ tags: [jetpack, kotlin]
 <li>Inside the <code>android</code> block, add the following code:</li>
 </ol>
 
-<pre><code>buildFeatures {
+```Kotlin
+buildFeatures {
     viewBinding true
-}</code></pre>
-
+}
+```
 <h3>View Binding in Activity</h3>
 
 <p>To use View Binding in an Activity, follow these steps:</p>
@@ -42,7 +43,8 @@ tags: [jetpack, kotlin]
 <li>Create a variable of the corresponding View Binding class</li>
 </ol>
 
-<pre><code>class MainActivity : AppCompatActivity() {
+```Kotlin
+class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,8 +53,8 @@ tags: [jetpack, kotlin]
         setContentView(binding.root)
         binding.textHelloWorld.text = "hello from the main activity"
     }
-}</code></pre>
-
+}
+```
 <p>According to convention, the variable is named <code>binding</code>, and the data type depends on the name of the layout. For example, if we have <code>activity_main.xml</code>, the View Binding class that is automatically generated will be <code>ActivityMainBinding</code> (append "Binding" to the layout name and capitalize the first letter).</p>
 
 <p>Next, we inflate the layout to assign the current layout to the <code>binding</code> variable.</p>
@@ -65,15 +67,16 @@ tags: [jetpack, kotlin]
 
 binding.textHelloWorld</code>. Since Kotlin automatically generates the getter/setter functions, we can access it as shown below:</p>
 
-<pre><code>class MainActivity : AppCompatActivity() {
+```Kotlin
+class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         // ...
         var currentText = binding.textHelloWorld.text
         binding.textHelloWorld.text = "hello from the main activity"
     }
-}</code></pre>
-
+}
+```
 <h3>View Binding and Fragment - Inflate</h3>
 
 <p>For Fragments, we have two approaches: inflate and bind. Let's start with inflate.</p>
@@ -84,20 +87,23 @@ binding.textHelloWorld</code>. Since Kotlin automatically generates the getter/s
 <li>Create a Fragment and override the <code>onCreateView</code> method.</li>
 </ol>
 
-<pre><code>class InflateFragment : Fragment(R.layout.fragment_inflate) {
+```Kotlin
+class InflateFragment : Fragment(R.layout.fragment_inflate) {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_blank, container, false)
     }
-}</code></pre>
+}
+```
 
 <p>Here, we pass the ID of the corresponding layout, which in this case is <code>R.layout.fragment_inflate</code>.</p>
 
 <p>According to convention, we create two variables: <code>_binding</code> (nullable) and <code>binding</code>. The <code>_binding</code> variable is used for inflating or binding the layout, while the <code>binding</code> variable retrieves the inflated/bound result from <code>_binding</code> for querying. If <code>_binding</code> is null, a <code>NullPointerException</code> is thrown.</p>
 
-<pre><code>class InflateFragment : Fragment(R.layout.fragment_inflate) {
+```Kotlin
+class InflateFragment : Fragment(R.layout.fragment_inflate) {
     private var _binding: FragmentInflateBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
@@ -112,7 +118,8 @@ binding.textHelloWorld</code>. Since Kotlin automatically generates the getter/s
         _binding = null
         super.onDestroy()
     }
-}</code></pre>
+}
+```
 
 <p>After inflating the layout, we can use the <code>binding</code> variable to query the components as we did in the Activity example. It's important to always override <code>onDestroy</code> and set <code>_binding</code> to null when the Fragment is destroyed.</p>
 
@@ -120,7 +127,8 @@ binding.textHelloWorld</code>. Since Kotlin automatically generates the getter/s
 
 <p>Similar to the previous approach, but this time we bind the view in the <code>onViewCreated</code> method after the view has been created. Here's an example:</p>
 
-<pre><code>class BindFragment : Fragment(R.layout.fragment_bind) {
+```Kotlin
+class BindFragment : Fragment(R.layout.fragment_bind) {
     private var _binding: FragmentBindBinding? = null
     private val binding get() = _binding!!
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -132,7 +140,8 @@ binding.textHelloWorld</code>. Since Kotlin automatically generates the getter/s
         _binding = null
         super.onDestroy()
     }
-}</code></pre>
+}
+```
 
 <p>Since the steps are similar, I won't explain them again. Just note the difference in the timing of inflating or binding the view, depending on whether the view has been created or not.</p>
 
