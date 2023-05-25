@@ -6,18 +6,10 @@ refactor: true
 {% include lang.html %}
 
 {% assign posts = '' | split: '' %}
+{% assign filtered_posts = site.posts | where: 'categories', 'Diary' %}
 
-{% for post in site.posts %}
-  {% assign hasDiaryCategory = false %}
-  {% for category in post.categories %}
-    {% if category == 'Diary' %}
-      {% assign hasDiaryCategory = true %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-  {% unless hasDiaryCategory %}
-    {% assign posts = posts | push: post %}
-  {% endunless %}
+{% for post in filtered_posts %}
+  {% assign posts = posts | push: post %}
 {% endfor %}
 
 <div id="post-list">
