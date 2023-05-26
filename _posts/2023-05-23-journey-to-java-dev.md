@@ -21,7 +21,7 @@ This will be a story about what I did in the way from nearly zero expreience in 
 
 - Completed 20 challenges from [30 days of code-hackerrank](https://www.hackerrank.com/domains/tutorials/30-days-of-code)
 
-- Create [my first CRUD app](FirstCRUDSpringApp) following
+- Create [my first CRUD app](https://github.com/Huythanh0x/JourneyWithJava/tree/main/FirstCRUDSpringApp) following
   this [short tutorial](https://www.youtube.com/watch?v=IucFDX3RO9U)
 
 - Short article, [REST hello world](https://spring.io/guides/gs/rest-service/)
