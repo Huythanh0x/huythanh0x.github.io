@@ -1,3 +1,5 @@
+cd Downloads
+
 # browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb&
@@ -12,7 +14,6 @@ sudo snap install intellij-idea-ultimate --classic --edge&
 #
 sudo snap install postman&
 sudo snap install scrcpy&
-sudo snap install vlc&
 sudo snap install docker&
 
 #social app
@@ -68,7 +69,35 @@ sudo apt-get install gnome-shell-extension-manager
 git config --global user.email "huythanh0x@gmail.com"
 git config --global user.name "huythanh0x"
 
+#sqlite
+sudo apt install sqlitebrowser -y
+
+#calibre
+sudo apt install calibre -y
+
+#vietnamese language 
+sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
+sudo apt-get update
+sudo apt-get install ibus-bamboo
+yes
+ibus restart
+
+sudo add-apt-repository ppa:xuzhen666/gnome-mpv
+yes
+sudo apt install gnome-mpv -y
+
+#teamviewer
+wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+sudo dpkg -i teamviewer_amd64.deb
+
 #edit keybord shortcuts
 #Winddows + E
 #Winddows + I
 #...
+
+sudo add-apt-repository universe
+sudo apt install libfuse2
+
+wget https://download3.navicat.com/download/navicat16-premium-en.AppImage
+chmod a+x navicat16-premium-en.AppImage
+./navicat16-premium-en.AppImage
