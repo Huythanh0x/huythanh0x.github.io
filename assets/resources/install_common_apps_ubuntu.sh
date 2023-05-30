@@ -3,7 +3,6 @@ cd Downloads
 # browser
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb&
-sudo snap install brave&
 
 #ide
 sudo snap install android-studio --classic&
@@ -101,3 +100,9 @@ sudo apt install libfuse2
 wget https://download3.navicat.com/download/navicat16-premium-en.AppImage
 chmod a+x navicat16-premium-en.AppImage
 ./navicat16-premium-en.AppImage
+
+#install brave
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
