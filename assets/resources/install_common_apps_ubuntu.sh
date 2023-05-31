@@ -30,7 +30,7 @@ echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/a
 sudo apt install -y wget git nano vim net-tools curl unzip unrar cmake redis anydesk zsh virtualbox tmux vlc python3-pip htop gparted tor neofetch jq
  
 #java
-sudo apt-get install default-jdk -y
+sudo apt install openjdk-17-jdk -y
 
 #install zsh            
 echo "===> INSTALL ZSH";
